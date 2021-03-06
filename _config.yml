@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: Beau Hodes
 description: Test description
+name: Beau Hodes
+markdown: kramdown
