@@ -3,13 +3,14 @@ body {
     width: 70%;
 }
 nav ul, footer ul {
+    background-color: #ace5ee;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
 nav ul li, footer ul li {
-    background-color: #ace5ee;
+    background-color: green;
     display: inline;
     margin-right: 20px;
 }
