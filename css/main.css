@@ -20,18 +20,16 @@ footer ul {
     font-size: 2em;
     text-align: center;
 }
-nav ul li {
+nav ul li, footer ul li {
     display: inline;
     margin-right: 30px;
-    border-radius: 25px;
-    background: #73AD21;
-    padding: 20px;
-    width: 200px;
-    height: 150px;
 }
-footer ul li {
-    display: inline;
-    margin-right: 30px;
+nav ul li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 a {
     text-decoration: none;
