@@ -12,6 +12,15 @@ nav {
   text-align: center;
   border-bottom: 4px solid black;
 }
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    align-items: center;
+    text-align: center;
+    border-top: 4px solid black;
+}
 @media screen and (max-width: 900px) {
   nav {
     grid-template-columns: 100%;
@@ -49,6 +58,19 @@ nav {
   padding: 1em 1em;
 }
 .navLinks:hover {
+  color: #0000ff;
+  padding: 1em 1em;
+}
+.footerLinks {
+  font-family: 'Lato', sans-serif;
+  font-size: .8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  padding: 1em 1em;
+}
+.footerLinks:hover {
   color: #0000ff;
   padding: 1em 1em;
 }
