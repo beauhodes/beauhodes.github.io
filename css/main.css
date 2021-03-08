@@ -27,17 +27,17 @@ nav {
   background-repeat: no-repeat;
   height: 10vh;
 }
-.2 {
-  grid-column: 1;
+.1 {
+    grid-column: 1;
 }
 .2 {
   grid-column: 2;
 }
 .3 {
-  grid-column: 4;
+  grid-column: 3;
 }
 .4 {
-  grid-column: 5;
+  grid-column: 4;
 }
 .navLinks {
   font-family: 'Lato', sans-serif;
