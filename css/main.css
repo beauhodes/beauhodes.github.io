@@ -63,8 +63,15 @@ p {
     color: #333;
 }
 footer {
+    font-family: 'Lato', sans-serif; 
     border-top: 1px solid black;
     font-size: .8em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 1em;
+    list-style: none;
 }
 
 ul.posts { 
