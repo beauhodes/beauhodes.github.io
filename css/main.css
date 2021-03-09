@@ -10,7 +10,7 @@ nav {
   grid-gap: 1em;
   align-items: center;
   text-align: center;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #007fff;
 }
 footer {
     display: grid;
@@ -58,7 +58,7 @@ footer {
   padding: 1em 1em;
 }
 .navLinks:hover {
-  color: #0000ff;
+  color: #007fff;
   padding: 1em 1em;
 }
 .footerLinks {
@@ -71,7 +71,7 @@ footer {
   padding: 1em 1em;
 }
 .footerLinks:hover {
-  color: #0000ff;
+  color: #007fff;
   padding: 1em 1em;
 }
 
