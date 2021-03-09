@@ -49,44 +49,47 @@ footer {
   grid-column: 4;
 }
 .navLinks {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 600;
-  color: black;
-  padding: 1em 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    padding: 1em 1em;
 }
 .navLinks:hover {
-  color: #007fff;
-  padding: 1em 1em;
+    color: #007fff;
+    padding: 1em 1em;
 }
 navLinks:active {
-  color: #848482;
+    color: #848482;
+}
+navLinks a.active {
+    color: #848482;
 }
 .footerLinks {
-  font-family: 'Lato', sans-serif;
-  font-size: .8em;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 600;
-  color: black;
-  padding: 1em 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    padding: 1em 1em;
 }
 footerLinks:visited {
-  color: black;
+    color: black;
 }
 .footerLinks:hover {
-  color: #007fff;
-  padding: 1em 1em;
+    color: #007fff;
+    padding: 1em 1em;
 }
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1em;
+    /*line-height: 1.4em; */
     color: #333;
 }
 ul.posts { 
