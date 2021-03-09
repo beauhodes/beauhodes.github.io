@@ -55,9 +55,12 @@ footer {
     text-decoration: none;
     font-weight: 600;
     color: black;
+    opacity: 0.6;
+    transition: 0.3s;
     padding: 1em 1em;
 }
 .navLinks:hover {
+    opacity: 1;
     color: #007fff;
     padding: 1em 1em;
 }
