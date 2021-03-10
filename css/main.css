@@ -67,8 +67,8 @@ footer {
     color: black;
 }
 .footerLinks:hover {
-    color: #007fff;
     text-decoration: none;
+    color: #696969;
 }
 .footerLinks:hover a {
   text-decoration: none;
