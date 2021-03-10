@@ -68,7 +68,11 @@ footer {
 }
 .footerLinks:hover {
     color: #007fff;
-    padding: 1em 1em;
+    text-decoration: none;
+}
+.footerLinks:hover a {
+  text-decoration: none;
+  color: inherit;
 }
 h1 {
     font-size: 3em;
