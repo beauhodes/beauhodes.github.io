@@ -90,3 +90,10 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+w3-button w3-block w3-left-align {
+    font-weight: bold;
+}
+projLink {
+    text-align: center;
+    color: blue;
+}
