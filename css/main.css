@@ -38,7 +38,7 @@ footer {
     height: 10vh;
 }
 .profilePic {
-    background-image: url("profilePic.jpg");
+    background-image: url("profilePic.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
