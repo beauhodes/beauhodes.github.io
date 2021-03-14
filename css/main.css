@@ -30,12 +30,19 @@ footer {
  }
 }
 .logo {
-  grid-column: 1;
-  background-image: url("logo.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 10vh;
+    grid-column: 1;
+    background-image: url("logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10vh;
+}
+.profilePic {
+    background-image: url("profilePic.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 5vh;
 }
 .navLinks {
     font-family: 'Lato', sans-serif;
