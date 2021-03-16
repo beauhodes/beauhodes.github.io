@@ -109,7 +109,6 @@ a.projLink {
     color: blue;
 }
 .resumeLink {
-    display: block;
     line-height: 7em;
     color: #69696;
     font-weight: bold;
@@ -121,5 +120,6 @@ a.projLink {
     height: 7em;
 }
 a.resumeLink {
+    display: block;
     text-align: center;
 }
