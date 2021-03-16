@@ -90,6 +90,7 @@ footer {
 h1 {
     font-size: 3em;
     /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
+    font-family: 'Lato', sans-serif; 
 }
 p {
     font-size: 1em;
@@ -120,13 +121,17 @@ a.projLink {
     width: 6.2em;
     height: 3em;
     text-decoration: none;
+    transition: color .5s;
+}
+.resumeLink:link {
+    color: #d3d3d3;
 }
 .resumeLink:visited {
-    color: #696969;
+    color: #d3d3d3;
 }
 .resumeLink:hover {
     text-decoration: none;
-    color: #696969;
+    color: white;
 }
 .resumeLink:hover a {
     text-decoration: none;
