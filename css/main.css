@@ -109,7 +109,7 @@ a.projLink {
     color: blue;
 }
 .resumeLink {
-    display: block;
+    position: relative
     color: #69696;
     font-weight: bold;
     text-align: center;
@@ -117,5 +117,9 @@ a.projLink {
     background: #007fff;
     padding: 20px;
     width: 200px;
-    height: 150px;
+    height: 10em;
+}
+a.resumeLink {
+    position: absolute;
+    top: 50%;
 }
