@@ -109,6 +109,7 @@ a.projLink {
     color: blue;
 }
 .resumeLink {
+    display: block;
     color: #69696;
     font-weight: bold;
     text-align: center;
