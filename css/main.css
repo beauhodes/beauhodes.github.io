@@ -120,3 +120,6 @@ a.projLink {
     width: 20em;
     height: 7em;
 }
+a.resumeLink {
+    text-align: center;
+}
