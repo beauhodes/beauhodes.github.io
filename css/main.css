@@ -109,17 +109,14 @@ a.projLink {
     color: blue;
 }
 .resumeLink {
-    position: relative;
+    display: block;
+    line-height: 7em;
     color: #69696;
     font-weight: bold;
     text-align: center;
     border-radius: 25px;
     background: #007fff;
     padding: 20px;
-    width: 200px;
-    height: 10em;
-}
-a.resumeLink {
-    position: absolute;
-    top: 50%;
+    width: 20em;
+    height: 7em;
 }
