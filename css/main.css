@@ -122,8 +122,12 @@ a.projLink {
     height: 3em;
     text-decoration: none;
     transition: color .5s;
+    color: #d3d3d3;
 }
 .resumeLink:link {
+    color: #d3d3d3;
+}
+.resumeLink a {
     color: #d3d3d3;
 }
 .resumeLink:visited {
