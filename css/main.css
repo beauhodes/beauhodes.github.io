@@ -116,6 +116,8 @@ a.projLink {
     border-radius: 25px;
     background: #007fff;
     padding: 0;
+    display: block;
+    margin:0 auto;
     width: 20em;
     height: 7em;
 }
