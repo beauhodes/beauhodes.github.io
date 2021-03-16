@@ -73,6 +73,7 @@ footer {
     text-decoration: none;
     font-weight: 600;
     color: black;
+    transition: color .5s;
     padding: 1em 1em;
 }
 .footerLinks:visited {
@@ -83,12 +84,12 @@ footer {
     color: #696969;
 }
 .footerLinks:hover a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    /* font-family:'Helvetica', 'Arial', 'Sans-Serif'; */
 }
 p {
     font-size: 1em;
@@ -118,4 +119,16 @@ a.projLink {
     padding: 0;
     width: 6.2em;
     height: 3em;
+    text-decoration: none;
+}
+.resumeLink:visited {
+    color: #696969;
+}
+.resumeLink:hover {
+    text-decoration: none;
+    color: #696969;
+}
+.resumeLink:hover a {
+    text-decoration: none;
+    color: inherit;
 }
