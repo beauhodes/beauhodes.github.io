@@ -119,3 +119,12 @@ a.projLink {
     height: 3em;
     color: #69696;
 }
+a.resumeLink:link {
+  color: green;
+  text-decoration: none;
+}
+
+a.resumeLink:visited {
+  color: pink;
+  text-decoration: none;
+}
