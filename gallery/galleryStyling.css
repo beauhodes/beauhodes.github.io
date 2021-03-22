@@ -54,6 +54,8 @@ img {
   background-color: #007fff;
   padding: 2px 16px;
   margin: 0;
+  line-height: 2em;
+  height: 2em;
 }
 .row:after {
   content: "";
