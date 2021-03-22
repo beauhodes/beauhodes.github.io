@@ -52,8 +52,8 @@ img {
 .caption-container {
   text-align: center;
   background-color: #d3d3d3;
-  padding: 2px 16px;
-  color: white;
+  padding: 2px /*16px*/;
+  /*color: white;*/
 }
 .row:after {
   content: "";
@@ -62,7 +62,7 @@ img {
 }
 .column {
   float: left;
-  width: 16.66%;
+  width: 10%;
 }
 .demo {
   opacity: 0.6;
