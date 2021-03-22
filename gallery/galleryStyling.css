@@ -52,7 +52,7 @@ img {
 .caption-container {
   text-align: center;
   background-color: #d3d3d3;
-  padding: 1px 16px;
+  padding: 2px 16px;
 }
 .row:after {
   content: "";
