@@ -51,8 +51,9 @@ img {
 }
 .caption-container {
   text-align: center;
-  background-color: #d3d3d3;
+  background-color: #007fff;
   padding: 2px 16px;
+  margin: 0;
 }
 .row:after {
   content: "";
