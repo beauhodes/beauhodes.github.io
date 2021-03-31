@@ -2,4 +2,4 @@ title: Beau Hodes
 description: Test description
 name: Beau Hodes
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /articles/:year/:month/:day/:title
