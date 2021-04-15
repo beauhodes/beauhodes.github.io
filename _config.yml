@@ -3,4 +3,4 @@ description: Test description
 name: Beau Hodes
 markdown: kramdown
 permalink: /articles/:year/:month/:day/:title
-google_analytics: G-9JGKLTXJ00
+#google_analytics: G-9JGKLTXJ00
