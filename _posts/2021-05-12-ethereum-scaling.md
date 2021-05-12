@@ -28,6 +28,6 @@ That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum g
 <br/>
 Charts courtesy of etherscan.io: <https://etherscan.io/chart/gasprice> , <https://etherscan.io/chart/tx>
 <br/>
-HERE
+HERE2
 <br/>
 <br/>
