@@ -3,6 +3,11 @@ layout: post
 title: The Future of Ethereum Scaling: No More $300 Gas Fees
 date: 2021-03-31
 ---
+<style>
+.imgContainer{
+    float:left;
+}
+</style>
 <br/>
 <h1 style="font-weight: bold; text-align: center;">The Future of Ethereum Scaling: No More $300 Gas Fees</h1>
 <br/>
@@ -17,6 +22,18 @@ Lately, Ethereum (ETH) gas fees have skyrocketed, cutting into the pockets of tr
 <br/>
 That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum gas and daily transaction charts from 2018 to today:
 <br/>
+<div class="images">
+    <div class="imgContainer">
+        <img src="ETHGas.png" width="300"/>
+    </div>
+    <div class="imgContainer">
+        <img src="ETHTransactions.png" width="300"/>
+        <p>This is image 2</p>
+    </div>
+</div>
+
+
+
 <p align="center">
   <img src="ETHGas.png" width="350" title="ETH for USDT Swap">
 </p>
