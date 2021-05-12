@@ -26,7 +26,7 @@ That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum g
   <img src="ETHTransactions.png" width="900" title="ETH for USDT Swap">
 </p>
 <br/>
-Charts courtesy of <etherscan.io><br/>
+Charts courtesy of <https://etherscan.io/><br/>
 HERE2
 <br/>
 <br/>
