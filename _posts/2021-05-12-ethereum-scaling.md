@@ -15,7 +15,7 @@ Lately, Ethereum (ETH) gas fees have skyrocketed, cutting into the pockets of tr
   <img src="ETHSwap.jpg" width="350" title="ETH for USDT Swap">
 </p>
 <br/>
-That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum gas and daily transaction charts from 2018 to today:
+That’ll be a $350 gas fee - insane. I would be at a net loss of about ~330 just to swap one token to another. Let’s also take a look at the Ethereum gas and daily transaction charts from 2018 to today:
 <br/>
 <br/>
 <p align="center">
