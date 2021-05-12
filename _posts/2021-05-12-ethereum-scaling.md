@@ -29,6 +29,22 @@ That’ll be a $350 gas fee - insane. I would be at a net loss of about ~330 jus
 <sub>Charts courtesy of https://etherscan.io</sub>
 <br/>
 <br/>
-HERE2
+To clarify, gas prices on the first chart are denominated in Gwei; one Gwei is equal to 0.000000001 ETH. As we can see, daily transactions are trending upwards. So, as the network has to process more of these transactions, it must charge more Gwei as a gas fee to compensate miners, and each Gwei becomes more and more expensive in terms of dollars as the price of ETH continues to move up. So, when you want to swap tokens through Uniswap, which takes 10+ individual transactions, the gas fees start piling up.
+
+Not only do current Ethereum scalability issues affect gas prices, they also affect transaction speed. This is clearly a problem, as Ethereum is home to many decentralized applications, NFTs, users, and developers. That’s where scaling solutions come in. 
+
+### **Scaling solutions**
+There are many proposed solutions to the Ethereum scaling issue. Some are already deployed, while others are still in development. Let’s go over a few prominent ones:
+<br/>
+- Layer 2 solutions such as zero-knowledge rollups. These seek to minimize on-chain transactions
+- Sidechains. These are separate blockchains that run in parallel to the main Ethereum chain, come with cheaper transaction costs, and allow assets to be moved on and off of them. They do, however, come with security risks because attacks on these, unlike layer 2 solutions, could result in stolen assets. Polygon provides an interesting side-chain-like solution that allows various deployed Ethereum-compatible chains to process cheaper transactions and still communicate with the Ethereum main chain. They also offer other scaling solutions.
+- EIP1559. This releases in a couple month’s time and features a new fee structure for gas.
+- ETH 2.0. This actually involves changes made to the Ethereum chain itself. Among the changes are a beacon chain (already active), proof of stake, and sharding. 
+
+Now, let’s dive deeper into some of these.
+
+### **ZK-rollups with ZK-STARKS**
+Zero-knowledge rollups offer over 100x improved scalability by batching many transactions into one and sending it to the main Ethereum blockchain. Two popular zero-knowledge proofs used in these rollups are ZK-SNARKs (discussed in an EARLIER ARTICLE) and ZK-STARKs. There are also other types of rollups such as optimistic rollups. In this article, I will focus on ZK-STARK based ZK-rollups. 
+
 <br/>
 <br/>
