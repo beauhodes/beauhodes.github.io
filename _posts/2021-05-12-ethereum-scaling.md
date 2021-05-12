@@ -17,6 +17,7 @@ Lately, Ethereum (ETH) gas fees have skyrocketed, cutting into the pockets of tr
 <br/>
 That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum gas and daily transaction charts from 2018 to today:
 <br/>
+<br/>
 <p align="center">
   <img src="ETHGas.png" width="900" title="ETH for USDT Swap">
 </p>
@@ -24,6 +25,8 @@ That’ll be a $350 gas fee - insane. Let’s also take a look at the Ethereum g
 <p align="center">
   <img src="ETHTransactions.png" width="900" title="ETH for USDT Swap">
 </p>
+<br/>
+Charts courtesy of etherscan.io: <https://etherscan.io/chart/gasprice> , <https://etherscan.io/chart/tx>
 <br/>
 HERE
 <br/>
