@@ -57,6 +57,17 @@ All funds are secured at the on-chain level, so an attack on the rollup could no
   <img src="MerkleTree.png" width="900" title="Merkle Tree">
 </p>
 <br/>
+<sub>A small example of a Merkle Tree that uses the Keccak-256 hash function</sub>
+<br/>
+<br/>
+I would like to take a short detour to discuss some key differences between STARK based ZK-rollups and SNARK based ZK-rollups. STARK proofs, unlike SNARKs, do not require a trusted setup phase. This means that there is never a chance for someone to learn the keys generated during trusted setup and create fake proofs. They are also post-quantum secure (referring to quantum computing) and require simpler cryptography than their SNARK counterparts. 
+
+For all of these reasons, STARKs have been the proof of choice for applications such as dYdX, a popular decentralized exchange, and Immutable X, a layer 2 scaling solution for NFTs. Both of them use STARK based ZK-rollups powered by Starkware Industries, a company working on building better STARK based scaling solutions, and both feature 0 gas fees for users. To put the scaling effect of these rollups into perspective, Immutable X saved users over $400,000 on their first day using ZK-rollups. 
+<br/>
+<br/>
+### **EIP1559**
+EIP1559, an Ethereum Improvement Proposal coming this July as part of the London Hard Fork, will implement gas fee related changes to the Ethereum main chain. To understand the changes being made, it is important to have a basic understanding of Ethereum’s current gas pricing model. Basically, users submitting transactions are competing to be included in the next block. Blocks only have so much space, so when many transactions come in around the same time, gas fees shoot up. This is good for miners who benefit from increased fees, but not for users who want to transfer .005 ETH to 20 USDT during a time of network congestion. 
+
 
 <br/>
 <br/>
