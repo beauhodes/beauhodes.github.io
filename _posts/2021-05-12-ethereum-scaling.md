@@ -117,7 +117,7 @@ There are still technical hurdles related to sharding such as instant interopera
 Even with EIP1559 creating more predictable gas fees/burning ETH and proof of stake reducing the time between blocks, layer 2 solutions will continue to play the most pivotal role in Ethereum’s scalability (yes, even after sharding). This is commonly understood, and it is also why so many layer 2s are in development right now. If you’re looking to build an application on Ethereum, I would highly recommend looking at various layer 2s in order to reduce gas costs for users and provide faster throughput. 
 <br/>
 <br/>
-### **ETH Competitors**
+### **ETH competitors**
 Another option for building a blockchain application is to use another chain. Ethereum does have its fair share of competitors, most of whom currently have notably smaller gas fees. They currently lack the network effects, development tools, and level of decentralization that Ethereum has, but they still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana (my favorite alternative), Polkadot, and Cardano. In my opinion, there is room for multiple chains that excel at different things (however, some of these chains mentioned have downsides that may be a deal-breaker for your application. DYOR beforehand). Assets can also be bridged between many well-known chains.
 <br/>
 <br/>
