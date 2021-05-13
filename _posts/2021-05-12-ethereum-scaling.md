@@ -121,7 +121,6 @@ Even with EIP1559 creating more predictable gas fees/burning ETH and proof of st
 <br/>
 ### **ETH Competitors**
 Ethereum does have its fair share of competitors, most of whom currently have miniscule gas fees. They do currently lack the network effects and development tools that Ethereum has, but they still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana, Polkadot, and Cardano.
-
 <br/>
 <br/>
 ### **What's next?**
