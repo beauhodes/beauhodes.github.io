@@ -86,7 +86,6 @@ signer.balance -= transaction.gas_limit * effective_gas_price
 self.account(block.author).balance += gas_used * priority_fee_per_gas
 ```
 <br/>
-
 The first line sets the miner's priority fee to the minimum of the transaction-specific priority fee and the difference between the maximum gas fee (which can be specified by the user) and the current base fee. This ensures that the base fee is always paid first and in full. Next, the total gas price is calculated by adding the priority fee that we calculated in the last line and the current base fee. Then, in the third line, the user pays the gas fee. Finally, further down (after the …,  which represents code that I left out), the miner is paid **only** the priority fee. The rest (the base fee) is burned.
 <br/>
 <br/>
