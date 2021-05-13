@@ -66,7 +66,90 @@ For all of these reasons, STARKs have been the proof of choice for applications 
 <br/>
 <br/>
 ### **EIP1559**
-EIP1559, an Ethereum Improvement Proposal coming this July as part of the London Hard Fork, will implement gas fee related changes to the Ethereum main chain. To understand the changes being made, it is important to have a basic understanding of Ethereum’s current gas pricing model. Basically, users submitting transactions are competing to be included in the next block. Blocks only have so much space, so when many transactions come in around the same time, gas fees shoot up. This is good for miners who benefit from increased fees, but not for users who want to transfer .005 ETH to 20 USDT during a time of network congestion. 
+EIP1559, an Ethereum Improvement Proposal coming this July as part of the London Hard Fork, will implement gas fee related changes to the Ethereum main chain. To understand the changes being made, it is important to have a basic understanding of Ethereum’s current gas pricing model. Basically, users submitting transactions are competing to be included in the next block. Blocks only have so much space, so when many transactions come in around the same time, gas fees shoot up. This is good for miners who benefit from increased fees, but not for users who want to transfer .005 ETH to 20 USDT during a time of network congestion.
+
+In order to combat this, EIP1559 introduces the concepts of a “base fee” and a “priority fee”. The base fee moves according to network congestion using a preset algorithm. They are also set algorithmically and constrained to certain values, so they can be reliably predicted (no more manually setting your gas fees for the most part) and cannot skyrocket at times of congestion. Most importantly, however, the base fee is burned. This means that, at times of congestion, ETH will become deflationary. Currently, Ethereum inflation sits at about 4.5% per year, but EIP1559 should cut this to under 1%. 
+
+The priority fee can be thought of as a tip to miners, and it is also automatically set. Since the base fee is burned, this priority fee is the only thing that miners keep (hence, the outrage of some miners at the introduction of EIP1559). 
+
+Additionally, EIP1559 contains a variable called ELASTICITY_MULTIPLIER, which is set to 2 and allows the maximum gas size per block to increase up to 2x its size (12.5 million gas to 25 million gas) during times of congestion, which should further help with throughput. 
+
+Let’s take a closer look at some of the EIP1559 code to see this in action:
+<br/>
+```python
+priority_fee_per_gas = min(transaction.max_priority_fee_per_gas, transaction.max_fee_per_gas - block.base_fee_per_gas)
+effective_gas_price = priority_fee_per_gas + block.base_fee_per_gas
+signer.balance -= transaction.gas_limit * effective_gas_price
+…
+self.account(block.author).balance += gas_used * priority_fee_per_gas
+```
+<br/>
+
+The first line takes the minimum of the tip offered to the miner (priority fee) and the difference between the maximum gas fee (specified by the user) and the current base fee. This ensures that the base fee is always paid first. Next, the full gas price is calculated by adding the priority fee we found in the last line and the current base fee. Then, in the third line, the user pays the gas fee. Finally, further down in the code (after the …,  which represents code that I left out), the is only paid the priority fee. 
+<br/>
+<br/>
+### **ETH 2.0**
+Lastly, we can't talk about future Ethereum scaling without mentioning the biggest change coming to Ethereum’s layer 1: ETH 2.0. This features, as stated before, a beacon chain, proof of stake, and eventually sharding.
+
+To understand the beacon chain, we have to understand proof of stake and why it helps. Currently, Ethereum uses proof of work where miners compete to earn rewards for validating blocks using advanced hardware to quickly solve math problems in hopes that they will be first. Obviously, this takes a substantial amount of electricity, uses hardware that requires a lot of resources to produce, and pushes the companies that make the hardware to develop mining hardware rather than other products. 
+
+Proof of stake is an alternative to proof of work that solves these problems. In proof of stake, token holders can “stake” their tokens (locking them up) to become a validator, help keep the network secure, and earn rewards. The idea here is that token holders do not want to see the token devalued, so it is in their best interest to be an honest validator. Non-honest validators also incur penalties. This helps reduce gas fees by reducing the time needed between blocks.
+
+The beacon chain, which is currently running parallel to the main proof of work Ethereum chain, gives stakers rewards come in the form of more ETH (for example, the priority fee we mentioned earlier). These rewards sit at about 7.4% APR right now, but that will go down as more stakers join in. You must own a minimum of 32 ETH to stake it, but staking pools aggregate ETH from members of the pool in order to allow those who hold less ETH to participate. 
+
+Sometime in 2021 or 2022, the beacon chain will merge with the main chain and Ethereum will become a fully proof of stake blockchain. This merge will combine the beacon chain’s proof of stake with the main chain’s ability to execute smart contracts.
+
+<br/>
+<br/>
+### **Sharding**
+I figured sharding required its own topic for three reasons. One, it is likely not coming til 2022 or later. Two, it is still in development, so the exact way it will look is not clear yet. Three, sharding will have a larger effect on scalability than EIP1559 or proof of stake. Now that that’s out of the way, what is sharding?
+
+Sharding is essentially a way of splitting up the work of verifying blocks into “shards”. The idea is to increase scalability by dividing up the amount of work that verifiers need to do. For Ethereum specifically, this will mean splitting it up into 64 shards, each with its own set of validators using proof of stake. The beacon chain gains additional jobs with sharding: facilitate data communication between shards, maintain a common state between shards, and assign validators to shards at random, which helps combat attacks on a single shard. 
+
+How does the actual block verification process look through sharding? Each verifier would perform data availability sampling (link with details provided at end of article) on each block in order to verify that all data is available and can be recovered. This technique only requires verifiers to look at a subset of the data per block in order to verify that it is all there. Then, a zero knowledge proof would be done to attest to the validity of the transactions in the block. 
+Zero knowledge proofs combined with 
+
+As of right now, the plan is for shards to only provide data availability (for example, there would be no execution of smart contracts on the shards). 
+At some point in the future, we could see execution happening on the shards, but that is much further away.
+
+There are still technical hurdles related to sharding such as instant interoperability between applications on different shards, but it is without a doubt being worked on as you read this.
+
+<br/>
+<br/>
+### **Summary**
+Even with EIP1559 creating more predictable gas fees and burning ETH and proof of stake reducing the time between blocks, layer 2 solutions will continue to play the most pivotal role in Ethereum’s scalability (yes, even after sharding). This is commonly understood, and it is also why so many layer 2s are in development right now. If you’re looking to build an application on Ethereum, I would highly recommend looking at various layer 2s in order to reduce gas costs for users and provide faster throughput. 
+
+<br/>
+<br/>
+### **ETH competitors**
+Ethereum does have its fair share of competitors, most of whom currently have miniscule gas fees. They do currently lack the network effects and development tools that Ethereum has, but still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana, Polkadot, and Cardano.
+
+<br/>
+<br/>
+### **Up next**
+I plan to write an article about the good and the bad of flash loans next. It will cover use cases, the code required to execute one, and front-running in the mempool
+
+### **Links/additional reading**
+Github page for EIP1559<br/>
+<https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md>
+<br/>
+<br/>
+
+Great article that goes more in depth on sharding. It explains the data availability concept mentioned earlier<br/>
+<https://vitalik.ca/general/2021/04/07/sharding.html>
+<br/>
+<br/>
+
+Immutable X discussing their Starkware based ZK-rollups<br/>
+<https://www.immutable.com/blog/design-architecture>
+<br/>
+<br/>
+
+Further explanation on the beacon/main chain merge<br/>
+<https://ethereum.org/en/eth2/merge/ >
+<br/>
+<br/>
+
 
 
 <br/>
