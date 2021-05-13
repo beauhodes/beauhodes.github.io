@@ -59,7 +59,7 @@ STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and 
 <br/>
 <br/>
 
-All funds are secured at the on-chain level, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Using these Merkle Trees and STARK proofs helps to minimize on-chain storage and costs. In addition to less frequent on-chain commitments due to batching and minimal on-chain storage, they **guarantee** the validity of all on-chain commitments at the time of commitment, which sets ZK-rollups apart from optimistic rollups. 
+All funds are secured at the on-chain level, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Using these Merkle Trees and STARK proofs helps to minimize on-chain storage and costs. In addition to less frequent on-chain commitments due to batching and minimal on-chain storage, ZK-rollups **guarantee** the validity of all on-chain commitments at the time of commitment, which sets them apart from optimistic rollups. 
 
 I would like to take a short detour to discuss some key differences between STARK based ZK-rollups and SNARK based ZK-rollups. STARK proofs, unlike SNARKs, do not require a trusted setup phase. This means that there is never a chance for someone to learn the keys generated during a trusted setup phase and create fake proofs. They are also post-quantum secure (referring to quantum computing) and require simpler cryptography than their SNARK counterparts. 
 <br/>
