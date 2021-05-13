@@ -100,7 +100,6 @@ Proof of stake is an alternative to proof of work that solves these problems. In
 The beacon chain, which is currently running parallel to the main proof of work Ethereum chain, gives stakers rewards come in the form of more ETH (for example, the priority fee we mentioned earlier). These rewards sit at about 7.4% APR right now, but that will go down as more stakers join in. You must own a minimum of 32 ETH to stake it, but staking pools aggregate ETH from members of the pool in order to allow those who hold less ETH to participate. 
 
 Sometime in 2021 or 2022, the beacon chain will merge with the main chain and Ethereum will become a fully proof of stake blockchain. This merge will combine the beacon chain’s proof of stake with the main chain’s ability to execute smart contracts. This should also help reduce gas fees by reducing the time needed between blocks.
-
 <br/>
 <br/>
 ### **Sharding**
@@ -114,7 +113,6 @@ As of right now, the plan is for shards to only provide data availability (for e
 At some point in the future, we could see execution happening on the shards, but that is much further away.
 
 There are still technical hurdles related to sharding such as instant interoperability between applications on different shards, but it is without a doubt being worked on as you read this.
-
 <br/>
 <br/>
 ### **Summary**
