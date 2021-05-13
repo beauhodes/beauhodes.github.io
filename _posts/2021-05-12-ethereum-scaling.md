@@ -19,11 +19,11 @@ That’ll be a $350 gas fee - insane. I would be at a net loss of about ~330 jus
 <br/>
 <br/>
 <p align="center">
-  <img src="ETHGas.png" width="900" title="ETH for USDT Swap">
+  <img src="ETHGas.png" width="900" title="ETH Gas">
 </p>
 <br/>
 <p align="center">
-  <img src="ETHTransactions.png" width="900" title="ETH for USDT Swap">
+  <img src="ETHTransactions.png" width="900" title="ETH Transactions">
 </p>
 <br/>
 <sub>Charts courtesy of https://etherscan.io</sub>
@@ -47,7 +47,16 @@ There are many proposed solutions to the Ethereum scaling issue. Some are alread
 Now, let’s dive deeper into some of these.
 
 ### **ZK-rollups with ZK-STARKS**
-Zero-knowledge rollups offer over 100x improved scalability by batching many transactions into one before sending it to the main Ethereum blockchain. Two popular zero-knowledge proofs used in these rollups are ZK-SNARKs (discussed in an [earlier article](http://beauhodes.com/articles/2021/03/31/zksnarks)) and ZK-STARKs. There are also other types of rollups such as optimistic rollups. In this article, I will focus on ZK-STARK based ZK-rollups. 
+Zero-knowledge rollups offer over 100x improved scalability by batching many transactions into one before sending it to the main Ethereum blockchain. Two popular zero-knowledge proofs used in these rollups are ZK-SNARKs (discussed in an [earlier article](http://beauhodes.com/articles/2021/03/31/zksnarks)) and ZK-STARKs. There are also other types of rollups such as optimistic rollups. For now, I'll focus on ZK-STARK based ZK-rollups. 
+
+STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and off-chain components. The on-chain component typically consists of proofs and two Merkle Trees: one for accounts and one for balances (see the picture below for an of a Merkle Tree for accounts). The off-chain component is responsible for handling transactions, batching them, creating a STARK proof of the validity of all transactions in the rollup, and sending the proof combined with the new Merkle Roots to the on-chain component.  
+
+All funds are secured on-chain, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Aside from less frequent on-chain updates due to batching, ZK-rollups save gas by publishing less data on-chain and all on-chain commitments are guaranteed to be valid at the time of commitment, which sets ZK-rollups apart from optimistic rollups. 
+<br/>
+<p align="center">
+  <img src="MerkleTree.jpg" width="900" title="Merkle Tree">
+</p>
+<br/>
 
 <br/>
 <br/>
