@@ -32,7 +32,7 @@ That’ll be a $350 gas fee, sir. Insane - I would be at a **net loss** of about
 To clarify, gas prices on the first chart are denominated in Gwei; one Gwei is equal to 0.000000001 ETH. As we can see from the second chart, daily transactions are trending upwards. So, as the network has to process more of these transactions, it must charge more Gwei as a gas fee to compensate miners, and each Gwei becomes more and more expensive in terms of dollars as the price of ETH continues to move up. So, when you want to swap tokens through Uniswap, which takes 10+ individual transactions, your gas fees start piling up.
 <br/>
 <br/>
-Not only do current Ethereum scalability issues affect gas prices, they also affect transaction speed. This is clearly a problem, as Ethereum is home to many decentralized applications, NFTs, users, and developers. That’s where scaling solutions come in. 
+Not only do current Ethereum scalability issues affect gas prices, they also affect transaction speed. This is clearly a problem, as Ethereum is home to many decentralized applications, NFTs, users, and developers. Its high decentralization, many developer tools, and network effects do not provide as much of an advantage if most users can't afford gas prices and lack accessibilty to something that is meant to **increase** access. That’s where scaling solutions come in. 
 <br/>
 <br/>
 
