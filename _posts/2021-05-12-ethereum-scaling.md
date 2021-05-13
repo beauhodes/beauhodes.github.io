@@ -15,7 +15,7 @@ Lately, Ethereum (ETH) gas fees have skyrocketed, cutting into the pockets of tr
   <img src="ETHSwap.jpg" width="350" title="ETH for USDT Swap">
 </p>
 <br/>
-That’ll be a $350 gas fee - insane. I would be at a net loss of about ~330 just to swap one token to another. Let’s also take a look at the Ethereum gas and daily transaction charts from 2018 to today:
+That’ll be a $350 gas fee - insane. I would be at a net loss of about ~330 just to swap one token to another. To get a better picture of why this is, let's take a look at the Ethereum gas and daily transaction charts from 2018 to today:
 <br/>
 <br/>
 <p align="center">
@@ -51,7 +51,7 @@ Zero-knowledge rollups offer over 100x improved scalability by batching many tra
 
 STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and off-chain components. The on-chain component typically consists of proofs and two Merkle Trees: one for accounts and one for balances (see the picture below for an example of a Merkle Tree for accounts). The off-chain component is responsible for handling transactions, batching them, creating a STARK proof attesting to the validity of all transactions in the rollup, and sending the proof combined with the new Merkle Roots to the on-chain component.  
 
-All funds are secured at the on-chain level, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Aside from less frequent on-chain updates due to batching, ZK-rollups save gas by publishing less data on-chain. They also guarantee the validity of all on-chain commitments at the time of commitment, which sets ZK-rollups apart from optimistic rollups. 
+All funds are secured at the on-chain level, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Aside from less frequent on-chain updates due to batching, ZK-rollups save gas by publishing less data on-chain. Plus, they guarantee the validity of all on-chain commitments at the time of commitment, which sets ZK-rollups apart from optimistic rollups. 
 <br/>
 <p align="center">
   <img src="MerkleTree.png" width="900" title="Merkle Tree">
