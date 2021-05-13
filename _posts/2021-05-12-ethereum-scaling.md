@@ -87,7 +87,7 @@ self.account(block.author).balance += gas_used * priority_fee_per_gas
 ```
 <br/>
 
-The first line takes the minimum of the tip offered to the miner (priority fee) and the difference between the maximum gas fee (specified by the user) and the current base fee. This ensures that the base fee is always paid first. Next, the full gas price is calculated by adding the priority fee we found in the last line and the current base fee. Then, in the third line, the user pays the gas fee. Finally, further down in the code (after the …,  which represents code that I left out), the is only paid the priority fee. 
+The first line takes the minimum of the tip offered to the miner (priority fee) and the difference between the maximum gas fee (specified by the user) and the current base fee. This ensures that the base fee is always paid first. Next, the full gas price is calculated by adding the priority fee we found in the last line and the current base fee. Then, in the third line, the user pays the gas fee. Finally, further down in the code (after the …,  which represents code that I left out), the miner is paid only the priority fee. 
 <br/>
 <br/>
 ### **ETH 2.0**
