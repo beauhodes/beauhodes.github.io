@@ -26,7 +26,7 @@ That’ll be a $350 gas fee, sir. Insane - I would be at a **net loss** of about
   <img src="/resources/ETHTransactions.png" width="900" title="ETH Transactions">
 </p>
 <br/>
-<sub>Charts courtesy of https://etherscan.io</sub>
+<sub>Charts courtesy of <https://etherscan.io></sub>
 <br/>
 <br/>
 To clarify, gas prices on the first chart are denominated in Gwei; one Gwei is equal to 0.000000001 ETH. As we can see from the second chart, daily transactions are trending upwards. So, as the network has to process more of these transactions, it must charge more Gwei as a gas fee to compensate miners, and each Gwei becomes more and more expensive in terms of dollars as the price of ETH continues to move up. So, when you want to swap tokens through Uniswap, which takes 10+ individual transactions, your gas fees start piling up.
