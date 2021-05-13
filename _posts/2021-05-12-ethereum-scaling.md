@@ -62,6 +62,8 @@ All funds are secured at the on-chain level, so an attack on the rollup could no
 <br/>
 I would like to take a short detour to discuss some key differences between STARK based ZK-rollups and SNARK based ZK-rollups. STARK proofs, unlike SNARKs, do not require a trusted setup phase. This means that there is never a chance for someone to learn the keys generated during trusted setup and create fake proofs. They are also post-quantum secure (referring to quantum computing) and require simpler cryptography than their SNARK counterparts. 
 <br/>
+<br/>
+
 For all of these reasons, STARKs have been the proof of choice for applications such as dYdX, a popular decentralized exchange, and Immutable X, a layer 2 scaling solution for NFTs. Both of them use STARK based ZK-rollups powered by Starkware Industries, a company working on building better STARK based scaling solutions, and both feature 0 gas fees for users. To put the scaling effect of these rollups into perspective, Immutable X saved users over $400,000 on their first day using ZK-rollups. 
 <br/>
 <br/>
