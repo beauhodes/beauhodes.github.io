@@ -116,12 +116,11 @@ There are still technical hurdles related to sharding such as instant interopera
 <br/>
 <br/>
 ### **Summary**
-Even with EIP1559 creating more predictable gas fees and burning ETH and proof of stake reducing the time between blocks, layer 2 solutions will continue to play the most pivotal role in Ethereum’s scalability (yes, even after sharding). This is commonly understood, and it is also why so many layer 2s are in development right now. If you’re looking to build an application on Ethereum, I would highly recommend looking at various layer 2s in order to reduce gas costs for users and provide faster throughput. 
-
+Even with EIP1559 creating more predictable gas fees/burning ETH and proof of stake reducing the time between blocks, layer 2 solutions will continue to play the most pivotal role in Ethereum’s scalability (yes, even after sharding). This is commonly understood, and it is also why so many layer 2s are in development right now. If you’re looking to build an application on Ethereum, I would highly recommend looking at various layer 2s in order to reduce gas costs for users and provide faster throughput. 
 <br/>
 <br/>
 ### **ETH Competitors**
-Ethereum does have its fair share of competitors, most of whom currently have miniscule gas fees. They do currently lack the network effects and development tools that Ethereum has, but still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana, Polkadot, and Cardano.
+Ethereum does have its fair share of competitors, most of whom currently have miniscule gas fees. They do currently lack the network effects and development tools that Ethereum has, but they still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana, Polkadot, and Cardano.
 
 <br/>
 <br/>
