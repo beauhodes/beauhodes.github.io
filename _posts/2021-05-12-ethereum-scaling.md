@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Future of Ethereum Scaling (No More $300 Gas Fees)
-date: 2021-03-31
+date: 2021-05-12
 ---
 <br/>
 <h1 style="font-weight: bold; text-align: center;">The Future of Ethereum Scaling: No More $300 Gas Fees</h1>
