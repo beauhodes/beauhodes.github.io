@@ -9,7 +9,7 @@ date: 2021-05-12
 <br/>
 
 ### **What’s the Ethereum gas issue?**
-Lately, Ethereum ($ETH) gas fees have skyrocketed, cutting into the pockets of transactors and completely blocking out some low-capital participants. For those who aren’t familiar, gas fees are fees paid to process a transaction on the Ethereum blockchain, whose native token (Ethereum) is the second largest cryptocurrency behind only Bitcoin. Gas fees go up as network congestion grows. As an example, let’s say you wanted to swap .005 ETH (at the time of this writing, worth about $20) for USDT, which is worth $1 each, through Uniswap. Uniswap is a DeFi application that allows you to, among other things, swap two Ethereum-based tokens. When I attempt to do this swap today, May 12th, 2021, this happens:
+Lately, Ethereum ($ETH) gas fees have skyrocketed, cutting into the pockets of transactors and completely blocking out some low-capital participants. For those who aren’t familiar, gas fees are fees paid to process a transaction on the Ethereum blockchain, whose native token (Ethereum) is the second largest cryptocurrency behind only Bitcoin. Gas fees go up as network congestion grows. As an example, let’s say you wanted to swap .005 ETH (at the time of writing, worth about $20) for USDT, which is worth $1 each, through Uniswap. Uniswap is a DeFi application that allows you to, among other things, swap two Ethereum-based tokens. When I attempt to do this swap today, May 12th, 2021, this happens:
 <br/>
 <p align="center">
   <img src="/resources/ETHSwap.jpg" width="350" title="ETH for USDT Swap">
