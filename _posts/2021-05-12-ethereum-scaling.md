@@ -54,7 +54,7 @@ STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and 
 All funds are secured on-chain, so an attack on the rollup could not steal them – a user can always withdraw by providing a path in the Merkle tree from their account to the root. Aside from less frequent on-chain updates due to batching, ZK-rollups save gas by publishing less data on-chain and all on-chain commitments are guaranteed to be valid at the time of commitment, which sets ZK-rollups apart from optimistic rollups. 
 <br/>
 <p align="center">
-  <img src="MerkleTree.jpg" width="900" title="Merkle Tree">
+  <img src="MerkleTree.png" width="900" title="Merkle Tree">
 </p>
 <br/>
 
