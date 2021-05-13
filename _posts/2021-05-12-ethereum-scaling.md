@@ -49,7 +49,7 @@ Now, let’s dive deeper into some of these.
 ### **ZK-rollups with ZK-STARKS**
 Zero-knowledge rollups, a layer 2 solution, offer over 100x improved scalability by batching many transactions into one before sending it to the main Ethereum blockchain. Two popular zero-knowledge proofs used in these rollups are ZK-SNARKs (discussed in an [earlier article](http://beauhodes.com/articles/2021/03/31/zksnarks)) and ZK-STARKs. There are also other types of rollups such as optimistic rollups. For now, I'll focus on ZK-STARK based ZK-rollups. 
 
-STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and off-chain components. The on-chain component typically consists of proofs and two Merkle Trees: one for accounts and one for balances (see the picture below for an example of a Merkle Tree for accounts). The off-chain component is responsible for handling transactions, batching them, creating a STARK proof attesting to the validity of all transactions in the rollup, and sending the proof combined with the new Merkle Roots to the on-chain component.  
+STARK based rollups have both on-chain, meaning on the Ethereum blockchain, and off-chain components. The on-chain component typically consists of proofs and two Merkle Trees: one for accounts and one for balances (see the picture below for an example of a Merkle Tree for accounts). The off-chain component is responsible for handling transactions, batching them, creating a STARK proof attesting to the validity of all transactions in the rollup, and sending the proof and the new Merkle Roots to the on-chain component.  
 <br/>
 <p align="center">
   <img src="/resources/MerkleTree.png" width="900" title="Merkle Tree">
