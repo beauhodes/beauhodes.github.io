@@ -123,12 +123,12 @@ Even with EIP1559 creating more predictable gas fees and burning ETH and proof o
 
 <br/>
 <br/>
-### **ETH competitors**
+### **ETH Competitors**
 Ethereum does have its fair share of competitors, most of whom currently have miniscule gas fees. They do currently lack the network effects and development tools that Ethereum has, but still see their fair share of volume. Notable competitors include Binance Smart Chain, Solana, Polkadot, and Cardano.
 
 <br/>
 <br/>
-### **Up next**
+### **What's next?**
 I plan to write an article about the good and the bad of flash loans next. It will cover use cases, the code required to execute one, and front-running in the mempool
 
 ### **Links/additional reading**
