@@ -46,7 +46,6 @@ Anyone can get a flash loan through protocols that offer them and have sufficien
 ### **Coding a flash loan**
 As an example, I’ve put together a short smart contract, shown below, that uses Aave<sup>1</sup> to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Also, for the non-coders, everything following a double slash (//) is a comment, not actual code. Let’s walk through how the contract works.
 
-*insert code*
 ```javascript
 pragma solidity 0.6.12;
 
