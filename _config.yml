@@ -2,5 +2,6 @@ title: Beau Hodes
 description: Test description
 name: Beau Hodes
 markdown: kramdown
+  syntax_highlighter: coderay
 permalink: /articles/:year/:month/:day/:title
 #google_analytics: G-9JGKLTXJ00
