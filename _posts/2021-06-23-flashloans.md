@@ -130,11 +130,49 @@ To summarize, the steps we took here were:
 Not too bad! Obviously, factors like total gas fees, slippage on trades, and price movements must be accounted for depending on what strategy you use, but you get the idea. 
 
 Let’s say you did all of this, executed a successful arbitrage strategy, profited $500 thousand, but, after the block is completed, you don’t see the profit. In fact, upon further inspection, someone ELSE performed the same trades as you and made the profit due to their transaction being included in the block first. How could this have happened? Well, this is known as front running, and it is where the Ethereum mempool and MEV come in to make things a bit more complicated. I’m not going to go in depth on these because there is just so much material on both, but I’ll do my best to explain the general ideas. 
+<br/>
+<br/>
 
-Mempool Intro
+### **Mempool overview**
 In Ethereum, the mempool is where transactions are sent prior to being added to a block. While here, transactions spread to different nodes who can view them and run checks on them. This is great for security…but it also allows for things like front running, where a node operator could see your transaction with a $500 thousand profit and decide to submit the same transaction with two key differences: the node operator is now the executor of the transactions and the gas reward paid to the miner is higher. This higher gas fee incentivizes miners to place the operator’s transaction in a block before ours. In our case, the fact that our contract only allows the owner (us) to call initiateFlashLoan should protect against this, but this practice is very common in cases where there is no such protection. 
 
 Quick sidenote: Not all blockchains have mempools (well, depending on how you define a mempool); for instance, Solana instead uses a transaction forwarding protocol that they call Gulf Stream<sup>2</sup>.
+<br/>
+<br/>
 
+### **MEV overview**
+There is a connection to be made between our front running example and MEV, and I wanted to discuss it mainly because MEV is an extremely interesting aspect of blockchains that most people overlook. So, what is MEV? It stands for maximum extractable value and, in proof of work systems, is sometimes referred to as miner extractable value. There is somewhat of a twofold reason for this: miners could front run or reorder transactions (there are also many other attacks) themselves for profit, and they could also profit from higher gas prices paid to them by node operators who front run someone else. In the second scenario, the MEV is being split between the miner and operator - the miner profits from the increased gas payment, and the operator profits the difference between the transaction profit and the additional gas fee paid out. Right now, this is the scenario we see playing out. Operators use bots to front run, back run, sandwich attack, etc transactions, and miners collect the premium gas fees. This makes sense for now because miners do not want to build a bad reputation, especially large ones, but this could always change especially as Ethereum moves closer to proof of stake.
+
+That’s as far as I’ll get into MEV, but there’s much more to learn about the topic and lots of interesting research being done. Some argue that MEV is unavoidable and that the best solutions we can come up with will simply mitigate it or democratize access to it. Others view it as an existential threat to crypto that needs to be solved once and for all. There’s a lot of good discussion around this topic, and I’d encourage you to check out projects like Flashbots(CITE) if you’re interested in learning more(CITE). 
+
+### **Conclusion**
+Although the mempool and MEV concepts can make things a bit more complicated, flash loans are fairly simple products themselves that wouldn’t be possible in non-blockchain systems. As the industry moves along, it will be interesting to see how they evolve and which other new financial products come as a result of the new technology. A couple closing notes:
+-	The risk of flash loan attacks on DeFi protocols, like I said earlier, are forcing developers to be much more careful in terms of security and much more conservative in what assumptions they can make about users’ interaction with their smart contracts. This may be a good thing for the industry overall as it will force a higher focus on security, but there will also be successful attacks on less-secure applications that will lose people lots of money (and already have). This is why it’s important to do your own research especially when interacting with unproven smart contracts. 
+-	To protect against these attacks, DeFi projects can look to decentralized oracles like the ones that Chainlink provides especially when dealing with price data. For protection during the governance process, it is wise to force tokens to be locked for a certain amount of time or to implement a time-locked-weighted voting system. 
+
+### **Citations/resources**
+<sup>1</sup>Aave's guide to flash loans<br/>
+<https://docs.aave.com/developers/guides/flash-loans>
 <br/>
 <br/>
+
+<sup>2</sup>Solana's Gulf Stream<br/>
+<https://medium.com/solana-labs/gulf-stream-solanas-mempool-less-transaction-forwarding-protocol-d342e72186ad>
+<br/>
+<br/>
+
+<sup>3</sup>Flashbots article<br/>
+<https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752>
+<br/>
+<br/>
+
+<sup>4</sup>Flashbots Github<br/>
+<https://github.com/flashbots/pm>
+<br/>
+<br/>
+
+MEV podcast with Flashbots co-founders<br/>
+<https://open.spotify.com/episode/3F559QFcuMezWeBOJHEvCR?si=Jv1B-oDSTSSPxDdKirDs5A&nd=1>
+<br/>
+<br/>
+
