@@ -48,7 +48,7 @@ As an example, I’ve put together a short smart contract, shown below, that use
 
 ```javascript
 ```
-{% highlight Solidity %}
+{% highlight c++ %}
 pragma solidity 0.6.12;
 
 import "@openzeppelin/contracts/math/SafeMath.sol";
@@ -117,7 +117,7 @@ contract flashLoanContract is FlashLoanReceiverBase {
   }
 
 }
-{% highlight %}
+{% endhighlight %}
 <br/>
 Initially, our contract imports some Aave-related smart contracts that will allow us to interact with their lending pools to borrow DAI. When we actually deploy this contract, the constructor is called and uses Aave’s FlashLoanReceiverBase contract, which our contract inherits from, to set the lending pool to the one we want. 
 
