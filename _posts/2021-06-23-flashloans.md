@@ -39,8 +39,8 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 
 Anyone can get a flash loan through protocols that offer them and have sufficient reserves of capital to offer. Aave, dYdX, Uniswap, and Pancakeswap are some of the most common that offer smart contract support for flash loans. There are also some more user-friendly interfaces like Collateral Swap, Furucombo, and DeFi Saver. However, it’s easiest to understand flash loans by looking “under the hood” at the smart contracts.
 
-Coding a flash loan
-As an example, I’ve put together a short smart contract, shown below, that uses Aave to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Also, for the non-coders, everything following a double slash (//) is a comment, not actual code. Let’s walk through how the contract works.
+### **Coding a flash loan**
+As an example, I’ve put together a short smart contract, shown below, that uses Aave<sup>1</sup> to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Also, for the non-coders, everything following a double slash (//) is a comment, not actual code. Let’s walk through how the contract works.
 
 *insert code*
 ```javascript
@@ -113,5 +113,28 @@ contract flashLoanContract is FlashLoanReceiverBase {
 
 }
 ```
+<br/>
+Initially, our contract imports some Aave-related smart contracts that will allow us to interact with their lending pools to borrow DAI. When we actually deploy this contract, the constructor is called and uses Aave’s FlashLoanReceiverBase contract, which our contract inherits from, to set the lending pool to the one we want. 
+
+When we want to initiate the flash loan, we would call the initiateFlashLoan function found at the bottom of the contract. All that this does is confirms that we, the caller, are the owner of the contract, and then calls _initiateFlashLoan to do the real work. Inside of _initiateFlashLoan, we specify that we want 100 ether worth of DAI (DAI is specified by the on-chain contract for the DAI stablecoin) and that we want mode 0 which is a flash loan. We also set some other parameters that don’t matter in this example but are required by Aave’s flashLoan function. Then, we call the flashLoan function on the Aave lending pool that we had specified at deployment time. Aave’s lending pool smart contract picks up this call, performs some logic to verify the loan, and then makes a call to our executeOperation function.
+
+When executeOperation is called, we know that our contract has received the flash loan. Here, we can execute the logic to perform debt swaps, arbitrage trades, or really whatever we want by calling on different external smart contracts. After that, we compare the balance we have left to the loan amount plus fees to ensure that we can afford to pay back the loan. This step is not really necessary because, if we cannot repay the loan after performing our logic, Aave knows to revert the transaction since we specified mode = 0 (no debt flash loan). Regardless, I left it there as an example of how to check this. We can use a similar calculation to calculate profit and send it to ourselves. Finally, we approve the lending pool to take back the amount that we owe for the loan, and Aave’s smart contract will automatically pull that amount for repayment before the transaction finalizes. 
+
+To summarize, the steps we took here were:
+- Deployed a smart contract that allows us to interact with a specific Aave lending pool to obtain flash loans
+- From the same account that we deployed with, called initiateFlashLoan()
+- Specified what we wanted from Aave: a flash loan for 100 ether worth of DAI
+- Received the flash loan and performed logic using the DAI we received (well, we would have if there would was actual logic in place of “Input Logic”)
+- Ensured that we could pay back the loan, kept any profit, and approved the lending pool to take back that amount
+
+Not too bad! Obviously, factors like total gas fees, slippage on trades, and price movements must be accounted for depending on what strategy you use, but you get the idea. 
+
+Let’s say you did all of this, executed a successful arbitrage strategy, profited $500 thousand, but, after the block is completed, you don’t see the profit. In fact, upon further inspection, someone ELSE performed the same trades as you and made the profit due to their transaction being included in the block first. How could this have happened? Well, this is known as front running, and it is where the Ethereum mempool and MEV come in to make things a bit more complicated. I’m not going to go in depth on these because there is just so much material on both, but I’ll do my best to explain the general ideas. 
+
+Mempool Intro
+In Ethereum, the mempool is where transactions are sent prior to being added to a block. While here, transactions spread to different nodes who can view them and run checks on them. This is great for security…but it also allows for things like front running, where a node operator could see your transaction with a $500 thousand profit and decide to submit the same transaction with two key differences: the node operator is now the executor of the transactions and the gas reward paid to the miner is higher. This higher gas fee incentivizes miners to place the operator’s transaction in a block before ours. In our case, the fact that our contract only allows the owner (us) to call initiateFlashLoan should protect against this, but this practice is very common in cases where there is no such protection. 
+
+Quick sidenote: Not all blockchains have mempools (well, depending on how you define a mempool); for instance, Solana instead uses a transaction forwarding protocol that they call Gulf Stream<sup>2</sup>.
+
 <br/>
 <br/>
