@@ -6,7 +6,5 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-        css_class: 'highlight'
 permalink: /articles/:year/:month/:day/:title
 #google_analytics: G-9JGKLTXJ00
