@@ -59,10 +59,10 @@ import { ILendingPoolAddressesProvider } from "./ILendingPoolAddressesProvider.s
 contract flashLoanContract is FlashLoanReceiverBase {
   using SafeMath for uint256;
 
-  //Upon contract deployment, we specify which Aave lending pool to use for the loan
+  //Upon contract deployment, we specify which Aave lending pool to use for the loan with the _addressProvider parameter
   constructor(ILendingPoolAddressesProvider _addressProvider) FlashLoanReceiverBase(_addressProvider) public {}
 
-  //called after we have received the loan
+  //Called after we have received the loan
   function executeOperation(
       address[] calldata assets,
       uint256[] calldata amounts,
@@ -72,7 +72,7 @@ contract flashLoanContract is FlashLoanReceiverBase {
       ) external override returns (bool) {
 
       //Input logic
-      //Could be multiple swaps, providing collateral, etc
+      //Could be multiple swaps, adding/removing collateral, etc.
 
       //Check to ensure we can pay back. Even if we did not do this, Aave would revert the transaction
       //Since we are only calling this with one asset, we can do some simple math
@@ -91,6 +91,7 @@ contract flashLoanContract is FlashLoanReceiverBase {
       return true;
   }
 
+  //Initiates the flash loan
   function _initiateFlashLoan() internal {
     address receiver = address(this);
 
@@ -101,15 +102,16 @@ contract flashLoanContract is FlashLoanReceiverBase {
     amounts[0] = 100 ether; //specify loan amount: 100 ether worth of DAI tokens
 
     uint256[] memory modes = new uint256[](1);
-    modes[0] = 0; //no debt - loan must all be paid back in the same transaction
+    modes[0] = 0; //no debt: loan must all be paid back in the same transaction
 
-    address onBehalfOf = address(this);
-    bytes memory params = ""; //would need to encode if needed - for instance "abi.encode(address(this), insert_params_here)"
-    uint16 referralCode = 0;
+    address onBehalfOf = address(this); //ignore for now
+    bytes memory params = ""; //would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
+    uint16 referralCode = 0; //ignore for now
 
     LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //initiate the flash loan
   }
 
+  ////Called by us to initiate the flash loan
   function initiateFlashLoan() public onlyOwner {
     _initiateFlashLoan();
   }
