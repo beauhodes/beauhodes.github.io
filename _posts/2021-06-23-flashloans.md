@@ -35,7 +35,11 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 - Debt swaps: Swapping the platform or asset of a loan to obtain a better rate. For instance, if you had a loan for DAI with an interest rate of 7% but the rate for USDT loans was 5%, you could use a flash loan to pay back your DAI loan, take out a new loan for USDC at the lower rate, swap the USDC for DAI, and pay back the flash loan all in one transaction. You could think of this as instant refinancing.
 - Attacks: Flash loans are also used in attacks on DeFi platforms. Usually this involves using large amounts of capital to manipulate prices or taking advantage of systematic issues in protocols to steal tokens. Most attacks are complex, and these are requiring developers to be much more careful about protocol design and, for trading-related apps, where they get price data from. 
 
- 
+ <br/>
+<p align="center">
+  <img src="/resources/pool.jpg" width="350" title="Meme">
+</p>
+<br/>
 
 Anyone can get a flash loan through protocols that offer them and have sufficient reserves of capital to offer. Aave, dYdX, Uniswap, and Pancakeswap are some of the most common that offer smart contract support for flash loans. There are also some more user-friendly interfaces like Collateral Swap, Furucombo, and DeFi Saver. However, it’s easiest to understand flash loans by looking “under the hood” at the smart contracts.
 
