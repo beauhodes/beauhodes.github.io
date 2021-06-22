@@ -37,7 +37,7 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 
  <br/>
 <p align="center">
-  <img src="/resources/pool.jpg" width="350" title="Meme">
+  <img src="/resources/pool.png" width="350" title="Meme">
 </p>
 <br/>
 
