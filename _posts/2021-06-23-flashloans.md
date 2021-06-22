@@ -47,6 +47,8 @@ Anyone can get a flash loan through protocols that offer them and have sufficien
 As an example, I’ve put together a short smart contract, shown below, that uses Aave<sup>1</sup> to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Also, for the non-coders, everything following a double slash (//) is a comment, not actual code. Let’s walk through how the contract works.
 
 ```javascript
+```
+{% highlight Solidity %}
 pragma solidity 0.6.12;
 
 import "@openzeppelin/contracts/math/SafeMath.sol";
@@ -115,7 +117,7 @@ contract flashLoanContract is FlashLoanReceiverBase {
   }
 
 }
-```
+{% highlight %}
 <br/>
 Initially, our contract imports some Aave-related smart contracts that will allow us to interact with their lending pools to borrow DAI. When we actually deploy this contract, the constructor is called and uses Aave’s FlashLoanReceiverBase contract, which our contract inherits from, to set the lending pool to the one we want. 
 
