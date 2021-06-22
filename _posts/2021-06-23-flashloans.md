@@ -10,7 +10,7 @@ date: 2021-06-23
 
 <br/>
 <p align="center">
-  <img src="/resources/flash.jpg" width="350" title="Flash">
+  <img src="/resources/flash.jpg" width="600" title="Flash">
 </p>
 <br/>
 <sub><a href="https://www.vecteezy.com/free-vector/3d">Source: Vecteezy</a></sub>
@@ -37,7 +37,7 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 
  <br/>
 <p align="center">
-  <img src="/resources/pool.png" width="350" title="Meme">
+  <img src="/resources/pool.png" width="500" title="Meme">
 </p>
 <br/>
 
