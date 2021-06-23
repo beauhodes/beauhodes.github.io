@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_inprogress
 title: Flash Loans, Mempools, and MEV
 date: 2021-06-23
 ---
