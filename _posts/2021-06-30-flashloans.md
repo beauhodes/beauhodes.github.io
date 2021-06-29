@@ -129,8 +129,35 @@ contract flashLoanContract is FlashLoanReceiverBase {
 <br/>
 Initially, our contract imports some Aave-related smart contracts that will allow us to interact with their lending pools to borrow DAI. When we actually deploy this contract, the constructor is called and uses Aave’s FlashLoanReceiverBase contract, which our contract inherits from, to set the lending pool to the one we want. 
 
-When we want to initiate the flash loan, we would call the initiateFlashLoan function found at the bottom of the contract. All that this does is confirms that we, the caller, are the owner of the contract, and then calls _initiateFlashLoan to do the real work. 
+```solidity
+//Called by us to initiate the flash loan
+  function initiateFlashLoan() public onlyOwner {
+    _initiateFlashLoan();
+  }
+```
+When we want to initiate the flash loan, we would call this initiateFlashLoan function found at the bottom of the contract. All that this does is confirms that we, the caller, are the owner of the contract, and then calls _initiateFlashLoan to do the real work. 
 
+```solidity
+//Initiates the flash loan
+  function _initiateFlashLoan() internal {
+    address receiver = address(this);
+
+    address[] memory assets = new address[](1);
+    assets[1] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
+
+    uint256[] memory amounts = new uint256[](1);
+    amounts[0] = 100 ether; //specify loan amount: 100 ether worth of DAI tokens
+
+    uint256[] memory modes = new uint256[](1);
+    modes[0] = 0; //no debt: loan must all be paid back in the same transaction
+
+    address onBehalfOf = address(this); //ignore for now
+    bytes memory params = ""; //would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
+    uint16 referralCode = 0; //ignore for now
+
+    LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //initiate the flash loan
+  }
+```
 Next, inside of _initiateFlashLoan, we specify that we want 100 ether worth of DAI (DAI is specified by the on-chain contract for the DAI stablecoin - it's the 0x6b... address) and that we want mode 0 which is a flash loan. We also set some other parameters that don’t matter in this example but are required by Aave’s flashLoan function. Then, we call the flashLoan function on the Aave lending pool that we had specified at deployment time. Aave’s lending pool smart contract picks up this call, performs some logic to verify the loan, and then makes a call to our executeOperation function.
 
 When executeOperation is called, we know that our contract has received the flash loan. Here, we can execute the logic to perform debt swaps, arbitrage trades, or really whatever we want by calling on different external smart contracts. After that, we compare the balance we have left to the loan amount plus fees to ensure that we can afford to pay back the loan. This step is not really necessary because, if we cannot repay the loan after performing our logic, Aave knows to revert the transaction since we specified mode = 0 (no debt flash loan) in the flashLoan parameters. Regardless, I left it there as an example of how to check this. We could use a similar calculation to calculate profits and send them to ourself. Finally, we approve the lending pool to take back the amount that we owe for the loan, and Aave’s smart contract will automatically pull that amount for repayment before the transaction finalizes. 
