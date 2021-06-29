@@ -45,10 +45,9 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 <p align="center">
   <img src="/resources/pool.png" width="500" title="Meme">
 </p>
-<br/>
 <sub>Without oracles to assist in pricing assets, dexs can be vulnerable to price manipulation.</sub>
 <br/>
-
+<br/>
 Anyone can get a flash loan through protocols that offer them and have sufficient reserves of capital to offer. Aave, dYdX, Uniswap, and Pancakeswap are some of the most common that offer smart contract support for flash loans. There are also some more user-friendly interfaces like Collateral Swap, Furucombo, and DeFi Saver. However, it’s easiest to understand flash loans by looking “under the hood” at the smart contracts.
 
 ### **Coding a flash loan**
