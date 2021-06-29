@@ -50,7 +50,7 @@ Since a flash loan must be taken out and paid back in the same transaction, how 
 Anyone can get a flash loan through protocols that offer them and have sufficient reserves of capital to offer. Aave, dYdX, Uniswap, and Pancakeswap are some of the most common that offer smart contract support for flash loans. There are also some more user-friendly interfaces like Collateral Swap, Furucombo, and DeFi Saver. However, it’s easiest to understand flash loans by looking “under the hood” at the smart contracts.
 
 ### **Coding a flash loan**
-In order to obtain a flash loan, you would usually deploy your own contract.  As an example, I’ve put together a short smart contract, shown below, that uses Aave<sup>1</sup> to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Additionally, you'd probably want to make it more customizable than this, but it's easier to understand with things like the amount hard-coded in. Let’s walk through how the contract works.
+In order to obtain a flash loan, you would usually deploy your own contract.  As an example, I’ve put together a short smart contract, shown below, that uses Aave<sup>1</sup> to obtain a flash loan for 10 ether worth of DAI. If ETH was priced at $2000, we’d be getting a flash loan of about $200,000. Keep in mind that this code should not be used in production and it has not been error checked/audited. Additionally, you'd probably want to make it more customizable than this, but it's easier to understand with things like the amount hard-coded in. Let’s walk through how the contract works - I'll post the full contract code below, and then pull out sections to look through in more detail.
 
 ```solidity
 pragma solidity 0.6.12;
@@ -160,6 +160,36 @@ When we want to initiate the flash loan, we would call this initiateFlashLoan fu
 ```
 Next, inside of _initiateFlashLoan, we specify that we want 100 ether worth of DAI (DAI is specified by the on-chain contract for the DAI stablecoin - it's the 0x6b... address) and that we want mode 0 which is a flash loan. We also set some other parameters that don’t matter in this example but are required by Aave’s flashLoan function. Then, we call the flashLoan function on the Aave lending pool that we had specified at deployment time. Aave’s lending pool smart contract picks up this call, performs some logic to verify the loan, and then makes a call to our executeOperation function.
 
+```solidity
+//Called after we have received the loan
+  function executeOperation(
+      address[] calldata assets,
+      uint256[] calldata amounts,
+      uint256[] calldata premiums,
+      address initiator,
+      bytes calldata params
+      ) external override returns (bool) {
+
+      //Input logic
+      //Could be multiple swaps, adding/removing collateral, etc.
+
+      //Check to ensure we can pay back. Even if we did not do this, Aave would revert the transaction
+      //Since we are only calling this with one asset, we can do some simple math
+      uint amountOwed = amounts[0].add(premiums[0]); //calculate loan repayment amount
+      require(amountOwed <= getBalanceInternal(address(this), assets[0]); //ensure we can repay the loan
+
+      //Send any profits wherever you want - do not keep them in this contract
+
+      //Allow the lending pool to be able to take back the amount owed for the loan
+      //Since we only used one asset, you could do this without a for loop, but I'll leave it as an example
+      for (uint i = 0; i < assets.length; i++) {
+        uint amountOwed = amounts[i].add(premiums[i]);
+        IERC20(assets[i]).approve(address(LENDING_POOL), amountOwed);
+      }
+
+      return true;
+  }
+```
 When executeOperation is called, we know that our contract has received the flash loan. Here, we can execute the logic to perform debt swaps, arbitrage trades, or really whatever we want by calling on different external smart contracts. After that, we compare the balance we have left to the loan amount plus fees to ensure that we can afford to pay back the loan. This step is not really necessary because, if we cannot repay the loan after performing our logic, Aave knows to revert the transaction since we specified mode = 0 (no debt flash loan) in the flashLoan parameters. Regardless, I left it there as an example of how to check this. We could use a similar calculation to calculate profits and send them to ourself. Finally, we approve the lending pool to take back the amount that we owe for the loan, and Aave’s smart contract will automatically pull that amount for repayment before the transaction finalizes. 
 
 To summarize, the steps we took here were:
