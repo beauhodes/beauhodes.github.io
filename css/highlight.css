@@ -20,7 +20,7 @@
 .highlight .kd { color: #0000ff } /* Keyword.Declaration */
 .highlight .kn { color: #0000ff } /* Keyword.Namespace */
 .highlight .kp { color: #0000ff } /* Keyword.Pseudo */
-.highlight .kr { color: #0000ff } /* Keyword.Reserved */
+.highlight .kr { color: #d323d4 } /* Keyword.Reserved */
 .highlight .kt { color: #2b91af } /* Keyword.Type */
 .highlight .s { color: #a31515 } /* Literal.String */
 .highlight .nc { color: #2b91af } /* Name.Class */
