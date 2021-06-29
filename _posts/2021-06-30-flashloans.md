@@ -82,8 +82,8 @@ contract flashLoanContract is FlashLoanReceiverBase {
 
       //Check to ensure we can pay back. Even if we did not do this, Aave would revert the transaction
       //Since we are only calling this with one asset, we can do some simple math
-      uint amountOwed = amounts[0].add(premiums[0]); //calculate loan repayment amount
-      require(amountOwed <= getBalanceInternal(address(this), assets[0]); //ensure we can repay the loan
+      uint amountOwed = amounts[0].add(premiums[0]); //Calculate loan repayment amount
+      require(amountOwed <= getBalanceInternal(address(this), assets[0]); //Ensure we can repay the loan
 
       //Send any profits wherever you want - do not keep them in this contract
 
@@ -105,16 +105,16 @@ contract flashLoanContract is FlashLoanReceiverBase {
     assets[1] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
 
     uint256[] memory amounts = new uint256[](1);
-    amounts[0] = 100 ether; //specify loan amount: 100 ether worth of DAI tokens
+    amounts[0] = 100 ether; //Specify loan amount: 100 ether worth of DAI tokens
 
     uint256[] memory modes = new uint256[](1);
-    modes[0] = 0; //no debt: loan must all be paid back in the same transaction
+    modes[0] = 0; //No debt: loan must all be paid back in the same transaction
 
-    address onBehalfOf = address(this); //ignore for now
-    bytes memory params = ""; //would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
-    uint16 referralCode = 0; //ignore for now
+    address onBehalfOf = address(this); //Ignore for now
+    bytes memory params = ""; //Would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
+    uint16 referralCode = 0; //Ignore for now
 
-    LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //initiate the flash loan
+    LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //Communicate with lending pool to get the flash loan
   }
 
   //Called by us to initiate the flash loan
@@ -146,16 +146,16 @@ When we want to initiate the flash loan, we would call this initiateFlashLoan fu
     assets[1] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
 
     uint256[] memory amounts = new uint256[](1);
-    amounts[0] = 100 ether; //specify loan amount: 100 ether worth of DAI tokens
+    amounts[0] = 100 ether; //Specify loan amount: 100 ether worth of DAI tokens
 
     uint256[] memory modes = new uint256[](1);
-    modes[0] = 0; //no debt: loan must all be paid back in the same transaction
+    modes[0] = 0; //No debt: loan must all be paid back in the same transaction
 
-    address onBehalfOf = address(this); //ignore for now
-    bytes memory params = ""; //would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
-    uint16 referralCode = 0; //ignore for now
+    address onBehalfOf = address(this); //Ignore for now
+    bytes memory params = ""; //Would need to encode if used - for instance "abi.encode(address(this), insert_params_here)"
+    uint16 referralCode = 0; //Ignore for now
 
-    LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //initiate the flash loan
+    LENDING_POOL.flashLoan(receiver, assets, amounts, modes, onBehalfOf, params, referralCode); //Communicate with lending pool to get the flash loan
   }
 ```
 Next, inside of _initiateFlashLoan, we specify that we want 100 ether worth of DAI (DAI is specified by the on-chain contract for the DAI stablecoin - it's the 0x6b... address) and that we want mode 0 which is a flash loan. We also set some other parameters that don’t matter in this example but are required by Aave’s flashLoan function. Then, we call the flashLoan function on the Aave lending pool that we had specified at deployment time. Aave’s lending pool smart contract picks up this call, performs some logic to verify the loan, and then makes a call to our executeOperation function.
@@ -175,8 +175,8 @@ Next, inside of _initiateFlashLoan, we specify that we want 100 ether worth of D
 
       //Check to ensure we can pay back. Even if we did not do this, Aave would revert the transaction
       //Since we are only calling this with one asset, we can do some simple math
-      uint amountOwed = amounts[0].add(premiums[0]); //calculate loan repayment amount
-      require(amountOwed <= getBalanceInternal(address(this), assets[0]); //ensure we can repay the loan
+      uint amountOwed = amounts[0].add(premiums[0]); //Calculate loan repayment amount
+      require(amountOwed <= getBalanceInternal(address(this), assets[0]); //Ensure we can repay the loan
 
       //Send any profits wherever you want - do not keep them in this contract
 
