@@ -103,7 +103,7 @@ contract flashLoanContract is FlashLoanReceiverBase {
     address receiver = address(this);
 
     address[] memory assets = new address[](1);
-    assets[1] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
+    assets[0] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
 
     uint256[] memory amounts = new uint256[](1);
     amounts[0] = 100 ether; //Specify loan amount: 100 ether worth of DAI tokens
@@ -144,7 +144,7 @@ When we want to initiate the flash loan, we would call this initiateFlashLoan fu
     address receiver = address(this);
 
     address[] memory assets = new address[](1);
-    assets[1] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
+    assets[0] = address(0x6b175474e89094c44da98b954eedeac495271d0f); //DAI token address
 
     uint256[] memory amounts = new uint256[](1);
     amounts[0] = 100 ether; //Specify loan amount: 100 ether worth of DAI tokens
