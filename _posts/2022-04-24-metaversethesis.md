@@ -95,3 +95,7 @@ Of course, it’s possible to store user data off-chain using something like Cer
 <br/>
 <sub style="text-align: center;">Figure 2: One potential “dGame” architecture (many more are possible)</sub>
 <br/>
+
+Although we aren’t there yet, it certainly looks like progress is being made in this area. Many of the technologies mentioned in the *“How Do We Get Decentralized Games?”* section, combined with advances in cryptography (more efficient proofs) and constantly improving hardware (Moore’s Law), are opening the door for scalable, verifiable, off-chain computing done via decentralized networks to be realized in the future. Economic incentives and verifiable proofs such as those found in Render Network, Chainlink (2.0), and other off-chain technologies can ensure that these solutions are sustainable and scalable as well.
+
+We could probably build, ignoring some potential UI problems introduced by current wallet and key management solutions, a decentralized Twitter with current technologies. Scalable data storage and the ability to host decentralized, static interfaces are already, to an extent, here. To take things even further and build the future of the metaverse, however, we’ll need scalable, verifiable off-chain computation with robust anti-cheat measures.
