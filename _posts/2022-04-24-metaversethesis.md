@@ -10,7 +10,7 @@ date: 2022-04-24
 
 <br/>
 <p align="center">
-  <img src="/resources/metaverse.jpeg" width="600" title="Metaverse">
+  <img src="/resources/metaverse.jpeg" width="90%" title="Metaverse">
 </p>
 <br/>
 <div style="text-align: center;"><sub><a href="https://twitter.com/AuroryProject/status/1495758333617319938">Source</a></sub></div>
@@ -63,7 +63,7 @@ One approach is to encode the entire game, aside from the interface (usually run
 
 <br/>
 <p align="center">
-  <img src="/resources/basicflow.png" width="600" title="BasicFlow">
+  <img src="/resources/basicflow.png" width="90%" title="BasicFlow">
 </p>
 <br/>
 <div style="text-align: center;"><sub>Figure 1: Simple dApp transaction flow</sub></div>
@@ -98,7 +98,7 @@ Of course, it’s possible to store user data off-chain using something like Cer
 
 <br/>
 <p align="center">
-  <img src="/resources/potentialflow.jpg" width="600" title="PotentialFlow">
+  <img src="/resources/potentialflow.jpg" width="90%" title="PotentialFlow">
 </p>
 <br/>
 <div style="text-align: center;"><sub>Figure 2: One potential “dGame” architecture (many more are possible)</sub></div>
@@ -113,7 +113,7 @@ This topic is something that I’ve been <a href="https://twitter.com/bh359/stat
 
 <br/>
 <p align="center">
-  <img src="/resources/musings.jpg" width="600" title="Musings">
+  <img src="/resources/musings.jpg" width="90%" title="Musings">
 </p>
 <br/>
 <div style="text-align: center;"><sub>Figure 3: Musings about this issue</sub></div>
