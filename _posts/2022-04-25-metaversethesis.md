@@ -42,14 +42,23 @@ Centralized games typically build most of this from the ground up, though some a
 - **Decentralized/scalable compute:** Akash, Fluence, Aleph.im, ZK-rollups<sup>1</sup>, etc.
 - **Interfaces/rendering:** Render Network, The Graph<sup>2</sup>, Livepeer, etc.
 - **Connections:** Wallets, Pocket Network, Helium, etc.
+<br/>
 <sub><i>1 Mainly referring to recursive proofs; high scalability</i></sub>
 <sub>2 Referring to using subgraphs to scale queries</sub>
 
+Different “dGames” (decentralized games) and dApps will require different combinations of these. We already have some layers of the stack needed to make the aforementioned scalable, decentralized gaming vision happen, though there are some holes to be filled that will be addressed later.
+<br/>
+<br/>
+
+### **Current Crypto Games**
+One approach is to encode the entire game, aside from the interface (usually run on centralized cloud servers, but sometimes hosted using a decentralized service such as IPFS), into smart contracts. Current crypto games including Axie Infinity, DeFi Kingdoms, and Crabada operate this way. Often, they’ll use NFT metadata, randomness, and user inputs (“use this specific attack move”) as inputs to their smart contracts to produce some output. Although most crypto games don’t publish these contracts on block explorers or Github in order to keep their “secret sauce” safe and to make things harder on botters, this is really all that’s going on. This approach, when transition functions are not *highly* computationally-burdened or time-dependent, works great for more basic games such as turn-based strategy games. It also works great for DeFi applications and primitives, prediction markets, and the like as transition functions/rules are easier to program for financial assets that only require number manipulation.
+
+
 <br/>
 <p align="center">
-  <img src="/resources/flash.jpg" width="600" title="Flash">
+  <img src="/resources/basicflow.png" width="600" title="BasicFlow">
 </p>
 <br/>
-<sub><a href="https://www.vecteezy.com/free-vector/3d">Source: Vecteezy</a></sub>
+<sub><a href="https://www.vecteezy.com/free-vector/3d">Figure 1: Simple dApp transaction flow</a></sub>
 <br/>
 <br/>
