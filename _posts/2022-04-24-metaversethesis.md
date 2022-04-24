@@ -58,7 +58,7 @@ One approach is to encode the entire game, aside from the interface (usually run
   <img src="/resources/basicflow.png" width="600" title="BasicFlow">
 </p>
 <br/>
-<sub>Figure 1: Simple dApp transaction flow</sub>
+<sub style="text-align: center;">Figure 1: Simple dApp transaction flow</sub>
 <br/>
   
 This flow can obviously increase in scope when you consider more complex transactions (for instance, cross-chain transactions or rollup commits), but this is the core flow currently utilized by most crypto games.
@@ -93,5 +93,5 @@ Of course, it’s possible to store user data off-chain using something like Cer
   <img src="/resources/potentialflow.jpg" width="600" title="PotentialFlow">
 </p>
 <br/>
-<sub>Figure 1: Simple dApp transaction flow</sub>
+<sub style="text-align: center;">Figure 2: One potential “dGame” architecture (many more are possible)</sub>
 <br/>
