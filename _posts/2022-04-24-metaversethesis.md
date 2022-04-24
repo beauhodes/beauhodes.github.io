@@ -58,7 +58,7 @@ One approach is to encode the entire game, aside from the interface (usually run
   <img src="/resources/basicflow.png" width="600" title="BasicFlow">
 </p>
 <br/>
-<sub style="text-align: center;">Figure 1: Simple dApp transaction flow</sub>
+<div style="text-align: center;"><sub>Figure 1: Simple dApp transaction flow</sub></div>
 <br/>
   
 This flow can obviously increase in scope when you consider more complex transactions (for instance, cross-chain transactions or rollup commits), but this is the core flow currently utilized by most crypto games.
@@ -93,7 +93,7 @@ Of course, it’s possible to store user data off-chain using something like Cer
   <img src="/resources/potentialflow.jpg" width="600" title="PotentialFlow">
 </p>
 <br/>
-<sub style="text-align: center;">Figure 2: One potential “dGame” architecture (many more are possible)</sub>
+<div style="text-align: center;"><sub>Figure 2: One potential “dGame” architecture (many more are possible)</sub></div>
 <br/>
 
 Although we aren’t there yet, it certainly looks like progress is being made in this area. Many of the technologies mentioned in the *“How Do We Get Decentralized Games?”* section, combined with advances in cryptography (more efficient proofs) and constantly improving hardware (Moore’s Law), are opening the door for scalable, verifiable, off-chain computing done via decentralized networks to be realized in the future. Economic incentives and verifiable proofs such as those found in Render Network, Chainlink (2.0), and other off-chain technologies can ensure that these solutions are sustainable and scalable as well.
@@ -108,7 +108,7 @@ This topic is something that I’ve been <a href="https://twitter.com/bh359/stat
   <img src="/resources/musings.jpg" width="600" title="Musings">
 </p>
 <br/>
-<sub style="text-align: center;">Figure 3: Musings about this issue</sub>
+<div style="text-align: center;"><sub>Figure 3: Musings about this issue</sub></div>
 <br/>
 
 The interim solution is likely a combination of (a) games that take the current, simple transaction flow and build rich universes/experiences on top of it, such as Aurory, Illuvium, and DeFi Kingdoms’ upcoming multi-chain settings, and (b) games that use centralization to enable more complex gameplay with anti-cheat at the expense of some of the benefits we’d get from decentralization and probably some regulatory issues.
