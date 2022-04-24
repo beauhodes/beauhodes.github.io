@@ -42,9 +42,9 @@ Centralized games typically build most of this from the ground up, though some a
 - **Decentralized/scalable compute:** Akash, Fluence, Aleph.im, ZK-rollups<sup>1</sup>, etc.
 - **Interfaces/rendering:** Render Network, The Graph<sup>2</sup>, Livepeer, etc.
 - **Connections:** Wallets, Pocket Network, Helium, etc.
-<br/>
-<sub><i>1 Mainly referring to recursive proofs; high scalability</i></sub>
-<sub>2 Referring to using subgraphs to scale queries</sub>
+
+<sub><i><sup>1</sup> Mainly referring to recursive proofs; high scalability</i></sub><br>
+<sub><i><sup>2</sup> Referring to using subgraphs to scale queries</sub>
 
 Different “dGames” (decentralized games) and dApps will require different combinations of these. We already have some layers of the stack needed to make the aforementioned scalable, decentralized gaming vision happen, though there are some holes to be filled that will be addressed later.
 <br/>
@@ -53,12 +53,26 @@ Different “dGames” (decentralized games) and dApps will require different co
 ### **Current Crypto Games**
 One approach is to encode the entire game, aside from the interface (usually run on centralized cloud servers, but sometimes hosted using a decentralized service such as IPFS), into smart contracts. Current crypto games including Axie Infinity, DeFi Kingdoms, and Crabada operate this way. Often, they’ll use NFT metadata, randomness, and user inputs (“use this specific attack move”) as inputs to their smart contracts to produce some output. Although most crypto games don’t publish these contracts on block explorers or Github in order to keep their “secret sauce” safe and to make things harder on botters, this is really all that’s going on. This approach, when transition functions are not *highly* computationally-burdened or time-dependent, works great for more basic games such as turn-based strategy games. It also works great for DeFi applications and primitives, prediction markets, and the like as transition functions/rules are easier to program for financial assets that only require number manipulation.
 
-
 <br/>
 <p align="center">
   <img src="/resources/basicflow.png" width="600" title="BasicFlow">
 </p>
 <br/>
-<sub><a href="https://www.vecteezy.com/free-vector/3d">Figure 1: Simple dApp transaction flow</a></sub>
+<sub>Figure 1: Simple dApp transaction flow</sub>
 <br/>
-<br/>
+  
+This flow can obviously increase in scope when you consider more complex transactions (for instance, cross-chain transactions or rollup commits), but this is the core flow currently utilized by most crypto games.
+
+Again, game rules that determine outputs from number representations of NFT traits, randomness, and basic user input are easy to encode into smart contracts, as are AMMs or even more complex math such as the Black-Scholes equation for pricing options. The actual dApp or game interface is simply an abstraction over the underlying smart contracts that dictate the game’s rules, and these smart contract rules are enforced via the blockchains they run on. 
+
+Some current, simpler crypto games have certainly seen success in attracting relatively high amounts of users and economic activity due to novelty and economic incentives.
+- Axie Infinity has seen millions of daily active users, DeFi Kingdoms’ JEWEL token’s market cap reached over $1.3 billion in early January (now less than $300 million though), and other (upcoming) crypto games are raising millions by offering tokens to investors.
+- More and more developers are making the switch to crypto gaming, as are other gaming-related professionals like Justin Kan, co-founder of Twitch, who recently co-founded Solana-based NFT marketplace Fractal which focuses on gaming.
+- Some upcoming crypto games such as Aurory and Illuvium look like they’ll blow other crypto games out of the water in terms of visuals and depth of experience.
+- Gamified economies with real money on the line can be fun games in and of themselves.
+
+However, after playing current crypto games for a while, you’ll notice that these games are not very interactive. When you send your character on a quest in DeFi Kingdoms or to mine in Crabada, you don’t actually control the NFT doing that task. The NFT just leaves your wallet and comes back later along with some reward. Axie’s PvP mode is a bit more interactive, but it still uses simple turn-based transactions. Pokemon Red and Blue were doing this back in 1996; turn-based games are nothing new, though the self-custodied assets involved and decentralized method of enforcing the rules certainly are.
+  
+The lack of interactivity comes from the fact that these games are, for the most part, not skill-based. This makes sense; since the entire game flow is encoded directly into smart contracts, all transactions must have deterministic outcomes, computation is limited, and time constraints can be only roughly enforced. The winner of a PvP fight between two NFTs will be determined by the one that has the higher stats, perhaps combined with some randomness and basic player input. This approach does not work for skill-based games that require high levels of (typically very time-sensitive) computation. For instance, Call of Duty’s user-controlled gun fights cannot be efficiently encoded into smart contracts.
+  
+Despite the growth of current play-to-earn (or “play-and-earn”) crypto games, it’s become apparent that the “economic gameplay” aspects are attracting users more than any “fun gameplay” aspects are. Plus, with the current setup of having the games entirely encoded into smart contracts, it’s possible for mercenary players to turn the game into a “bot-to-earn” arena; Axie Infinity, Aurory, and Crabada have all been working on measures to limit bots, but it’s impossible to stop completely. There were over 3 billion active video game players in 2020, and that number is estimated to keep growing. In order to attract *billions* of users to crypto games and create more sustainable in-game economies, we need to improve the gameplay itself. In trying to do that, it appears that current crypto games are running up against a wall in terms of how expressive and dynamic they are. What gives?
