@@ -105,7 +105,7 @@ Although we aren’t there yet, it certainly looks like progress is being made i
 We could probably build, ignoring some potential UI problems introduced by current wallet and key management solutions, a decentralized Twitter with current technologies. Scalable data storage and the ability to host decentralized, static interfaces are already, to an extent, here. To take things even further and build the future of the metaverse, however, we’ll need scalable, verifiable off-chain computation with robust anti-cheat measures.
 
 ### **Conclusion**
-This topic is something that I’ve been <a href="https://twitter.com/bh359/status/1481110990116765696">thinking about</a> for a while now. It is apparent that others are as well, given some writings by prominent VCs (such as Multicoin Capital’s) and tweets such as the one below.
+This topic is something that I’ve been <a href="https://twitter.com/bh359/status/1481110990116765696">thinking about</a> for a while now. It is apparent that others are as well, given some writings by prominent VCs and tweets such as the one below.
 
 <br/>
 <p align="center">
