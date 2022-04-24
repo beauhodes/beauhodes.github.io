@@ -7,14 +7,10 @@ date: 2022-04-24
 <h1 style="font-weight: bold; text-align: center;">A Metaverse Investment Thesis</h1>
 <br/>
 <br/>
-
-<br/>
 <p align="center">
   <img src="/resources/metaverse.jpeg" width="90%" title="Metaverse">
 </p>
-<br/>
 <div style="text-align: center;"><sub><a href="https://twitter.com/AuroryProject/status/1495758333617319938">Source</a></sub></div>
-<br/>
 
 ### **Intro**
 Prevailing sentiment is that current crypto games are subpar compared to their centralized alternatives because of issues surrounding developer talent and, though less so, regulations. “Just wait until the big gaming studios come into crypto”, “No major game developer will incorporate crypto without regulatory clarity”, and “No one is really playing these play-to-earn games for fun” are all phrases that have been echoed in recent months. There *is* some truth to these; powerhouse game studios can usually out-engineer small teams of developers, a lack of regulatory clarity can deter traditional developers from incorporating crypto into their games, and a not-insignificant portion of gamers would enjoy Halo over Axie Infinity. That being said, the reality is that lower developer firepower and unclear regulations are only part of the reason why current crypto games can’t hold a candle, gameplay-wise, to traditional games.
