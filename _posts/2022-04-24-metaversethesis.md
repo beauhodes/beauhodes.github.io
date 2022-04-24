@@ -10,9 +10,10 @@ date: 2022-04-24
 
 <br/>
 <p align="center">
-  <img src="/resources/universe.jpeg" width="600" title="Metaverse">
+  <img src="/resources/metaverse.jpeg" width="600" title="Metaverse">
 </p>
 <br/>
+<div style="text-align: center;"><sub><a href="https://twitter.com/AuroryProject/status/1495758333617319938">Source</a></sub></div>
 <br/>
 
 ### **Intro**
