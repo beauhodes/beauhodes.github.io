@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Metaverse Investment Thesis
-date: 2022-04-24
+date: 2022-04-25
 ---
 <br/>
 <h1 style="font-weight: bold; text-align: center;">A Metaverse Investment Thesis</h1>
