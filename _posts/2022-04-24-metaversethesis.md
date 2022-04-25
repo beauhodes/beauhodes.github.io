@@ -115,7 +115,7 @@ This topic is something that I’ve been <a href="https://twitter.com/bh359/stat
 <div style="text-align: center;"><sub>Figure 3: Musings about this issue</sub></div>
 <br/>
 
-The interim solution is likely a combination of (a) games that take the current, simple transaction flow and build rich universes/experiences on top of it, such as Aurory, Illuvium, and DeFi Kingdoms’ upcoming multi-chain settings, and (b) games that use centralization to enable more complex gameplay with anti-cheat at the expense of some of the benefits we’d get from decentralization and probably some regulatory issues.
+The interim solution is likely a combination of (a) games that take the current, simple transaction flow and build rich universes/experiences on top of it, such as Aurory, Illuvium, and Yuga Lab’s upcoming Otherside project, and (b) games that use centralization to enable more complex gameplay with anti-cheat at the expense of some of the benefits we’d get from decentralization and probably some regulatory issues.
 
 Looking ahead, the potential for a fully decentralized metaverse is certainly a bright one. It will be up to builders creating new technologies and networks, forward-thinking investors backing the builders, users adopting these technologies for their advantages over centralized solutions, and regulators implementing laws that enable this open-source future to prosper to make this vision come to life. Once the building blocks are there and regulators come to support the tremendous advantages and benefits that could be realized as a result, then we can focus on getting the big gaming studios in.
 
