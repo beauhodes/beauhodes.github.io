@@ -70,7 +70,7 @@ This flow can obviously increase in scope when you consider more complex transac
 Again, game rules that determine outputs from number representations of NFT traits, randomness, and basic user input are easy to encode into smart contracts, as are AMMs or even more complex math such as the Black-Scholes equation for pricing options. The actual dApp or game interface is simply an abstraction over the underlying smart contracts that dictate the game’s rules, and these smart contract rules are enforced via the blockchains they run on. 
 
 Some current, simpler crypto games have certainly seen success in attracting relatively high amounts of users and economic activity due to novelty and economic incentives.
-- Axie Infinity has seen millions of daily active users, DeFi Kingdoms’ JEWEL token’s market cap reached over $1.3 billion in early January (though is now less than $300 million), and other (upcoming) crypto games are raising millions by offering tokens to investors.
+- Axie Infinity has seen millions of daily active users, DeFi Kingdoms’ JEWEL token’s market cap reached over $1.3 billion in early January (though it's now less than $300 million), and upcoming crypto games are raising millions by offering tokens to investors.
 - More and more developers are making the switch to crypto gaming, as are other gaming-related professionals like Justin Kan, co-founder of Twitch, who recently co-founded Solana-based NFT marketplace Fractal which focuses on gaming.
 - Some upcoming crypto games such as Aurory and Illuvium look like they’ll blow other crypto games out of the water in terms of visuals and depth of experience.
 - Gamified economies with real money on the line can be fun games in and of themselves.
