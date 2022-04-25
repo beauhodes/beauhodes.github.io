@@ -90,7 +90,7 @@ What needs to be accomplished is the separation of the more complex, highly time
 
 Of course, it’s possible to store user data off-chain using something like Ceramic and then to simply store references on-chain. Some ZK-rollups will, depending on the model, implement a similar process by using off-chain data availability. Regardless of how the data model is set up, more interactive crypto games will require:<br/>
 **(a)**	Off-chain components to handle more complex logic in a trustworthy/fair manner. This may look like a decentralized network of servers capable of scaling to demand, combined with verifiable proofs and cheat-checking logic to help ensure the game is executing as intended and the players are playing fair. It may look different as well. A caveat here is that my lack of experience in networking means that I am unsure exactly how far the jump is from current decentralized compute platforms (like Akash) to being able to run entire multiplayer games, and verify their execution, on a decentralized network. On the surface, it seems rather large.<br/>
-**(b)**	Oracles or another form of “relay network” to effectively pass this “outcome data” to wherever it needs to go.
+**(b)**	Oracles or another form of “relay network” to effectively pass the off-chain “outcome data” to wherever it needs to go.
 
 <br/>
 <p align="center">
