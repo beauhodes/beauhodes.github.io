@@ -94,7 +94,7 @@ Of course, it’s possible to store user data off-chain using something like Cer
 
 <br/>
 <p align="center">
-  <img src="/resources/potentialflow.jpg" width="90%" title="PotentialFlow">
+  <img src="/resources/potentialflow.png" width="90%" title="PotentialFlow">
 </p>
 <br/>
 <div style="text-align: center;"><sub>Figure 2: One potential “dGame” architecture (many more are possible)</sub></div>
