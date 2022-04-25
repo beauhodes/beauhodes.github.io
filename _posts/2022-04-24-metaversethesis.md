@@ -22,7 +22,7 @@ Surface-level, what might a utopian version of play-to-earn look like? Imagine R
 <br/>
 
 ### **Why Decentralization?**
-Centralized game creators own everything. Players’ data, items, and freedom to participate can be determined by the game creators. The game’s IP and profits are typically the sole property of the creators. Creators can change any of this at any time, which allows them to alter game mechanics, ban players without a reasonable cause, take away items that players have rightfully earned, or shut the game down completely. There may also be unintended side effects as a result of centralization such as high traffic shutting down servers, easy methods of cheating, or bugs that harm players’ experiences.
+Centralized game creators own everything. Players’ data, items, and freedom to participate can be determined by the game creators. The game’s IP and profits are typically the sole property of the creators. Creators can change any of this at any time, which allows them to alter game mechanics at will, ban players without a reasonable cause, take away items that players have rightfully earned, or shut the game down completely. There may also be unintended side effects as a result of centralization such as high traffic shutting down servers, easy methods of cheating, or bugs that harm players’ experiences.
 
 These lead us to some reasons why we would want decentralization in games:
 - **Censorship Resistance:** No central party can determine who can play.
